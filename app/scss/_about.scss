@@ -4,7 +4,7 @@
     height: auto;
     background-color: rgb(0, 0, 0);
     color: white;
-
+    // margin-left: 5%;
     &__wrap {
         width: 90%;
         height: auto;
@@ -14,14 +14,22 @@
 
             margin-left: 20%;
         }
+        @include breakpoint(lg7) {
+            display: block;
+            margin-left: 0%;
+        }
     }
     &__blok1 {
         width: 50%;
         min-width: 500px;
         height: 600px;
         display: flex;
+        margin-left: 7%;
         @include breakpoint(lg9) {
             width: 500px;
+        }
+        @include breakpoint(lg7) {
+            margin-left: 0%;
         }
         &__wrap1 {
             width: 50%;
