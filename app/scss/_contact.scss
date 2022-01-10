@@ -1,0 +1,235 @@
+.contact {
+    width: 100%;
+
+    background-color: black;
+    display: flex;
+    &__wrapper {
+        width: 60%;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__bottom {
+        padding: 15px;
+        background-color: #df1b1b;
+        color: white;
+        font-size: 20px;
+        margin-left: auto;
+        float: right;
+    }
+}
+
+$primary: #eb3939;
+$secondary: #df1b1b;
+$white: #fff;
+$gray: #fffefe;
+.contact__name__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact__name__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .contact__name__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.contact__name__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $gray;
+}
+
+.contact__name__field:focus {
+    ~ .contact__name__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary;
+        font-weight: 700;
+    }
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+}
+/* reset input */
+.contact__name__field {
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+///////////////////////////////////////////
+
+.contact__email__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact__email__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .contact__email__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.contact__email__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $gray;
+}
+
+.contact__email__field:focus {
+    ~ .contact__email__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary;
+        font-weight: 700;
+    }
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+}
+/* reset input */
+.contact__email__field {
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+////////////////////////////////////////////////////
+
+.contact__tema__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact__tema__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .contact__tema__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.contact__tema__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $gray;
+}
+
+.contact__tema__field:focus {
+    ~ .contact__tema__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary;
+        font-weight: 700;
+    }
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+}
+/* reset input */
+.contact__tema__field {
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+/////////////////////////////////////////////
+
+textarea {
+    width: 100%;
+    height: 400px;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    color: white;
+}

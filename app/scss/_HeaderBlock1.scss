@@ -1,0 +1,282 @@
+.header__menu.nav-active {
+    height: 100px;
+    @include breakpoint(sm) {
+        height: 200px;
+    }
+}
+.header__menu__item.nav-active {
+    display: flex;
+    @include breakpoint(sm) {
+        display: block;
+    }
+}
+.header {
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+
+    @include breakpoint(lg17) {
+    }
+    &__menu {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        position: fixed;
+        z-index: 10;
+        @include breakpoint(lg7) {
+            height: 50px;
+        }
+
+        &__logo {
+            width: 100px;
+            margin-left: 10%;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        &__logo1 {
+            width: 100px;
+            margin-left: 10%;
+            margin-top: auto;
+            margin-bottom: auto;
+            @include breakpoint(lg7) {
+                width: 50px;
+            }
+        }
+
+        &__item {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 20%;
+            height: 30px;
+            width: 400px;
+
+            display: flex;
+            justify-content: space-between;
+            @include breakpoint(lg7) {
+                display: none;
+            }
+        }
+        &__item1 {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 25px;
+            font-family: 'Monotype Corsiva';
+            cursor: pointer;
+        }
+        &__item1:hover {
+            color: red;
+        }
+    }
+
+    &__video {
+        width: 100%;
+        height: 840px;
+        background-color: aqua;
+        display: flex;
+
+        &__block1 {
+            width: 80%;
+            height: 600px;
+            background-color: rgba(241, 241, 241, 0.1);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            display: flex;
+            border-radius: 5px;
+            @include breakpoint(lg9) {
+                width: 800px;
+            }
+        }
+        &__block2 {
+            width: 50%;
+            height: 400px;
+            background-color: rgba(151, 35, 201, 0);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        &__title {
+            color: rgb(155, 9, 9);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 80px;
+            font-family: 'Mistral';
+            @include breakpoint(lg9) {
+                font-size: 40px;
+            }
+        }
+        &__text {
+            font-family: 'Monotype Corsiva';
+            color: rgb(255, 255, 255);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 30px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            @include breakpoint(lg9) {
+                width: 500px;
+                margin-right: 100px;
+            }
+        }
+        &__bottom {
+            font-family: 'Monotype Corsiva';
+            width: 150px;
+            border-radius: 5px;
+            border: 2px solid red;
+            font-size: 25px;
+            color: red;
+            background-color: rgb(32, 32, 32);
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin: 50px auto;
+            @include breakpoint(lg9) {
+                margin: 10px auto;
+            }
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-name: btn-animate1;
+        }
+
+        &__bottom:hover {
+            color: white;
+        }
+        @keyframes btn-animate1 {
+            0% {
+                transform: rotate(0deg) translateY(0);
+            }
+            33% {
+                transform: rotate(-15deg);
+            }
+            50% {
+                transform: rotate(-20deg);
+            }
+            70% {
+                transform: rotate(15deg);
+            }
+        }
+    }
+}
+@include breakpoint(lg7) {
+    .c-hamburger {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        box-shadow: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+    }
+    .c-hamburger:focus {
+        outline: none;
+    }
+
+    .c-hamburger span {
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 9px;
+        right: 9px;
+        height: 4px;
+        background: #fff;
+    }
+
+    .c-hamburger span::before,
+    .c-hamburger span::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        content: '';
+    }
+
+    .c-hamburger span::before {
+        top: -10px;
+    }
+    .c-hamburger span::after {
+        bottom: -10px;
+    }
+
+    .c-hamburger-line {
+        background-color: rgb(168, 168, 168);
+    }
+    .c-hamburger-line.is-active {
+        background-color: rgb(128, 0, 0);
+    }
+    .c-hamburger-line span {
+        transition: background 0s 0.3s;
+    }
+
+    .c-hamburger-line span::before,
+    .c-hamburger-line span::after {
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+    }
+
+    .c-hamburger-line span::before {
+        transition-property: top, transform;
+    }
+    .c-hamburger-line span::after {
+        transition-property: bottom, transform;
+    }
+
+    .c-hamburger-line.is-active span {
+        background-color: red;
+    }
+
+    .c-hamburger-line.is-active span {
+        background: none;
+    }
+
+    .c-hamburger-line.is-active span::before {
+        top: 0;
+        transform: rotate(-45deg);
+        transition-delay: 0s, 0.3s;
+    }
+    .c-hamburger-line.is-active span::after {
+        bottom: 0;
+        transform: rotate(45deg);
+        transition-delay: 0s, 0.3s;
+    }
+
+    #menu {
+        width: 100%;
+        margin-bottom: 0px;
+        background-color: wheat;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 90%;
+        transition: all ease 1s;
+        z-index: 9999;
+    }
+    .container {
+        width: 80%;
+        min-width: 1000px;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    /* .body-active {
+        margin-left: 300px;
+    } */
+    #menu.nav-active {
+        margin-bottom: -204px;
+    }
+}

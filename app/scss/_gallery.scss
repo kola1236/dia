@@ -1,0 +1,46 @@
+// <div class="gallery">
+//   <div class="gallery__wrap1">
+//   <div class="gallery__photo"></div>
+//   <div class="gallery__photo"></div>
+//   <div class="gallery__photo"></div>
+//   <div class="gallery__photo"></div>
+//   </div>
+//   <div class="gallery__wrap2">
+//     <div class="gallery__photo"></div>
+//     <div class="gallery__photo"></div>
+//     <div class="gallery__photo"></div>
+//     <div class="gallery__photo"></div>
+//     </div>
+//  </div>
+.gallery {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__photo {
+        background-color: rgb(0, 0, 0);
+        width: 25%;
+        @include breakpoint(lg12) {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+.gallery__photo__image11 {
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
+    @include breakpoint(lg12) {
+        height: 350px;
+    }
+}
+.gallery__photo__image22 {
+    width: 100%;
+    height: 450px;
+    @include breakpoint(lg12) {
+        height: 350px;
+    }
+}
