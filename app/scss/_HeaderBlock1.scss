@@ -77,7 +77,7 @@
         display: flex;
 
         &__block1 {
-            width: 80%;
+            width: 1000px;
             height: 600px;
             background-color: rgba(241, 241, 241, 0.1);
             margin-left: auto;
@@ -89,8 +89,22 @@
             @include breakpoint(lg9) {
                 width: 800px;
             }
+            @include breakpoint(lg7) {
+                width: 400px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
         &__block2 {
+            @include breakpoint(lg7) {
+                width: 200px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
             width: 50%;
             height: 400px;
             background-color: rgba(151, 35, 201, 0);
@@ -122,6 +136,10 @@
             @include breakpoint(lg9) {
                 width: 500px;
                 margin-right: 100px;
+            }
+            @include breakpoint(lg7) {
+                width: 400px;
+                margin-right: 0px;
             }
         }
         &__bottom {
